@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2C5170F0-C9F8-4340-97AB-77C531F8A375}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Ko2D</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\..\Libs\Include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\..\Libs\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Engine\3DMath.cpp" />
+    <ClCompile Include="..\..\..\Engine\Application.cpp" />
+    <ClCompile Include="..\..\..\Engine\Camera.cpp" />
+    <ClCompile Include="..\..\..\Engine\FileSystem.cpp" />
+    <ClCompile Include="..\..\..\Engine\Graphic.cpp" />
+    <ClCompile Include="..\..\..\Engine\Input.cpp" />
+    <ClCompile Include="..\..\..\Engine\Model.cpp" />
+    <ClCompile Include="..\..\..\Engine\Objects.cpp" />
+    <ClCompile Include="..\..\..\Engine\Particle.cpp" />
+    <ClCompile Include="..\..\..\Engine\ParticleSystem.cpp" />
+    <ClCompile Include="..\..\..\Engine\ResourcesManager.cpp" />
+    <ClCompile Include="..\..\..\Engine\Shaders.cpp" />
+    <ClCompile Include="..\..\..\Engine\StateManager.cpp" />
+    <ClCompile Include="..\..\..\Engine\Texture.cpp" />
+    <ClCompile Include="..\..\..\Engine\TGA.cpp" />
+    <ClCompile Include="..\..\..\Engine\WinApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Engine\3DMath.h" />
+    <ClInclude Include="..\..\..\Engine\Application.h" />
+    <ClInclude Include="..\..\..\Engine\Camera.h" />
+    <ClInclude Include="..\..\..\Engine\Engine.h" />
+    <ClInclude Include="..\..\..\Engine\FileSystem.h" />
+    <ClInclude Include="..\..\..\Engine\GameState.h" />
+    <ClInclude Include="..\..\..\Engine\GL2D.h" />
+    <ClInclude Include="..\..\..\Engine\Graphic.h" />
+    <ClInclude Include="..\..\..\Engine\Input.h" />
+    <ClInclude Include="..\..\..\Engine\Model.h" />
+    <ClInclude Include="..\..\..\Engine\Objects.h" />
+    <ClInclude Include="..\..\..\Engine\ParticleSystem.h" />
+    <ClInclude Include="..\..\..\Engine\ResourcesManager.h" />
+    <ClInclude Include="..\..\..\Engine\Shaders.h" />
+    <ClInclude Include="..\..\..\Engine\Singleton.h" />
+    <ClInclude Include="..\..\..\Engine\StateManager.h" />
+    <ClInclude Include="..\..\..\Engine\Texture.h" />
+    <ClInclude Include="..\..\..\Engine\TGA.h" />
+    <ClInclude Include="InGameState.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

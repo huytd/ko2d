@@ -1,0 +1,22 @@
+#Models: 0
+//ID 0
+//FILE Models/skysea.obj
+
+#Textures: 0
+//ID 0
+//FILE Textures/screen_bg_01.tga
+//TILING REPEAT
+
+#Shaders: 2
+ID 0
+VS Shaders/Rect2D.vs
+FS Shaders/Rect2D.fs
+STATES 2
+STATE CULLING
+STATE DEPTH_TEST
+ID 1
+VS Shaders/Billboard.vs
+FS Shaders/Billboard.fs
+STATES 2
+STATE CULLING
+STATE DEPTH_TEST
